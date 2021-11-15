@@ -23,7 +23,7 @@ public class CityController {
     }
 
     @GetMapping("/{cityId}")
-    public ResponseEntity<?> getCityById(@PathVariable final Long stateId) {
-        return ResponseEntity.ok(cityService.getCityById(stateId));
+    public ResponseEntity<?> getCityById(@PathVariable final Long cityId) {
+        return ResponseEntity.ok(cityService.getCityById(cityId));
     }
 }

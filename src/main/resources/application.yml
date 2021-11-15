@@ -1,8 +1,6 @@
 spring:
-  datasource:
-    url: jdbc:postgresql://localhost:5432/cities
-    username: postgres_user_city
-    password: super_password
+  application.name: cities-api
+  profiles.active: default
   flyway:
     enabled: true
   jpa:
