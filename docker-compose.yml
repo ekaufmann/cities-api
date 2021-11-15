@@ -1,0 +1,26 @@
+version: '3.1'
+
+services:
+
+  cities-db:
+    container_name: cities-db
+    image: postgres
+    volumes:
+      - postgresdb:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_USER: postgres_user_city
+      POSTGRES_PASSWORD: super_password
+      POSTGRES_DB: cities
+
+  adminer:
+    container_name: adminer
+    image: adminer
+    restart: always
+    ports:
+      - 8081:8081
+
+volumes:
+  postgresdb:
