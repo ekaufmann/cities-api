@@ -20,12 +20,15 @@ public class Country {
     @Id
     private Long id;
     @Column(name = "nome")
-    @Size(min = 3, max =)
+    @Size(min = 3, max = 60)
     private String name;
     @Column(name = "nome_pt")
+    @Size(min = 3, max = 60)
     private String namePt;
     @Column(name = "sigla")
+    @Size(min = 2, max = 2)
     private String abbreviation;
     @Column
+    @Size(min = 3)
     private Integer bacen;
 }
