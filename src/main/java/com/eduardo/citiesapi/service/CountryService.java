@@ -1,4 +1,4 @@
-package com.eduardo.citiesapi.services;
+package com.eduardo.citiesapi.service;
 
 import com.eduardo.citiesapi.entity.Country;
 import com.eduardo.citiesapi.repository.CountryRepository;
@@ -7,7 +7,6 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.NoSuchElementException;
 
 @Service

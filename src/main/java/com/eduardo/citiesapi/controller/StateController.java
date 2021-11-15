@@ -1,6 +1,6 @@
 package com.eduardo.citiesapi.controller;
 
-import com.eduardo.citiesapi.service.CountryService;
+import com.eduardo.citiesapi.service.StateService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,19 +11,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/countries")
+@RequestMapping("/states")
 @AllArgsConstructor
-public class CountryController {
+public class StateController {
 
-    private CountryService countryService;
+    private StateService stateService;
 
     @GetMapping
-    public ResponseEntity<Page<?>> getCountries(Pageable page) {
-        return ResponseEntity.ok(countryService.getCountries(page));
+    public ResponseEntity<Page<?>> getStates(Pageable page) {
+        return ResponseEntity.ok(stateService.getStates(page));
     }
 
-    @GetMapping("/{countryId}")
-    public ResponseEntity<?> getCountryById(@PathVariable Long countryId) {
-        return ResponseEntity.ok(countryService.getCountryById(countryId));
+    @GetMapping("/{stateId}")
+    public ResponseEntity<?> getStateById(@PathVariable Long stateId) {
+        return ResponseEntity.ok(stateService.getStateById(stateId));
     }
 }
