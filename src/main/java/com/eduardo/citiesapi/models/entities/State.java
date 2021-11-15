@@ -1,4 +1,4 @@
-package com.eduardo.citiesapi.entity;
+package com.eduardo.citiesapi.models.entities;
 
 import com.vladmihalcea.hibernate.type.json.JsonBinaryType;
 import lombok.AllArgsConstructor;

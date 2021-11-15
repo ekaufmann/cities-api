@@ -1,6 +1,6 @@
-package com.eduardo.citiesapi.controller;
+package com.eduardo.citiesapi.controllers;
 
-import com.eduardo.citiesapi.service.CountryService;
+import com.eduardo.citiesapi.services.CountryService;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -18,12 +18,12 @@ public class CountryController {
     private CountryService countryService;
 
     @GetMapping
-    public ResponseEntity<Page<?>> getCountries(Pageable page) {
+    public ResponseEntity<Page<?>> getCountries(final Pageable page) {
         return ResponseEntity.ok(countryService.getCountries(page));
     }
 
     @GetMapping("/{countryId}")
-    public ResponseEntity<?> getCountryById(@PathVariable Long countryId) {
+    public ResponseEntity<?> getCountryById(@PathVariable final Long countryId) {
         return ResponseEntity.ok(countryService.getCountryById(countryId));
     }
 }

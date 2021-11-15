@@ -1,7 +1,7 @@
-package com.eduardo.citiesapi.service;
+package com.eduardo.citiesapi.services;
 
-import com.eduardo.citiesapi.entity.Country;
-import com.eduardo.citiesapi.repository.CountryRepository;
+import com.eduardo.citiesapi.models.entities.Country;
+import com.eduardo.citiesapi.repositories.CountryRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -13,13 +13,13 @@ import java.util.NoSuchElementException;
 @AllArgsConstructor
 public class CountryService {
 
-    private CountryRepository countryRepository;
+    private final CountryRepository countryRepository;
 
-    public Page<Country> getCountries(Pageable page) {
+    public Page<Country> getCountries(final Pageable page) {
         return countryRepository.findAll(page);
     }
 
-    public Country getCountryById(Long countryId) {
+    public Country getCountryById(final Long countryId) {
         return countryRepository.findById(countryId)
                 .orElseThrow(NoSuchElementException::new);
     }

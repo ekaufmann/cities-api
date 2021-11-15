@@ -1,4 +1,4 @@
-package com.eduardo.citiesapi.entity;
+package com.eduardo.citiesapi.models.entities;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

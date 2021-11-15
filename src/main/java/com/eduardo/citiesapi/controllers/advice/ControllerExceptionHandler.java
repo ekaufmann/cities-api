@@ -1,4 +1,4 @@
-package com.eduardo.citiesapi.controller.advice;
+package com.eduardo.citiesapi.controllers.advice;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
