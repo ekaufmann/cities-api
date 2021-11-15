@@ -2,22 +2,22 @@
 -- Estrutura da tabela "cidade"
 --
 
-SET statement_timeout = 0;
-SET lock_timeout = 0;
-SET idle_in_transaction_session_timeout = 0;
-SET client_encoding = 'UTF8';
-SET standard_conforming_strings = on;
-SET check_function_bodies = false;
-SET client_min_messages = warning;
-SET row_security = off;
-
-DROP TABLE IF EXISTS "cidade" CASCADE;
+--SET statement_timeout = 0;
+--SET lock_timeout = 0;
+--SET idle_in_transaction_session_timeout = 0;
+--SET client_encoding = 'UTF8';
+--SET standard_conforming_strings = on;
+--SET check_function_bodies = false;
+--SET client_min_messages = warning;
+--SET row_security = off;
+--
+--DROP TABLE IF EXISTS "cidade" CASCADE;
 
 --
 -- Estrutura da tabela "cidade"
 --
 
-CREATE TABLE public.cidade (
+CREATE TABLE IF NOT EXISTS public.cidade (
     id bigint NOT NULL,
     nome character varying(120),
     uf integer,
@@ -39,7 +39,7 @@ ALTER TABLE public.cidade OWNER TO postgres_user_city;
 -- Name: cidade_id_seq; Type: SEQUENCE; Schema: public; Owner: postgres
 --
 
-CREATE SEQUENCE public.cidade_id_seq
+CREATE SEQUENCE IF NOT EXISTS public.cidade_id_seq
     START WITH 1
     INCREMENT BY 1
     NO MINVALUE

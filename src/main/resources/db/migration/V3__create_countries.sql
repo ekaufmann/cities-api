@@ -2,8 +2,9 @@
 -- Estrutura da tabela "pais"
 --
 
-DROP TABLE IF EXISTS "pais" CASCADE;
-CREATE TABLE pais (
+--DROP TABLE IF EXISTS "pais" CASCADE;
+
+CREATE TABLE IF NOT EXISTS pais (
   id       bigserial NOT NULL,
   nome     varchar(60),
   nome_pt  varchar(60),

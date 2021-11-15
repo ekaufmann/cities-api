@@ -2,9 +2,9 @@
 -- Estrutura da tabela "estado"
 --
 
-DROP TABLE IF EXISTS "estado" CASCADE;
+--DROP TABLE IF EXISTS "estado" CASCADE;
 
-CREATE TABLE estado (
+CREATE TABLE IF NOT EXISTS estado (
   id     bigserial NOT NULL,
   nome   varchar(60),
   uf  varchar(2),
